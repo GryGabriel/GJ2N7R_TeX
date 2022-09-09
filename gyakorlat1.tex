@@ -1,0 +1,69 @@
+\documentclass{article} 
+\usepackage[english,magyar]{babel}
+\frenchspacing
+\usepackage{t1enc}
+\usepackage{xcolor} %szükséges a színekhez
+\usepackage{graphicx} %szükséges a tükrözéshez
+\usepackage{lipsum}
+\usepackage{hulipsum}
+\usepackage{blindtext}
+\title{Az oldal címe}
+
+\begin{document}
+\maketitle
+%2.feladat
+\texttt{\textbf{Typewriter és Vastag}} %nem
+\\
+\textsc{\em{Kiskapitális és dőlt}} 
+%igen
+\\
+\textsl{\textsf{Slanted és sans serif}} %igen
+\\
+\em{\emph{Emph italicra való hatása}}
+\\
+\textbf{\emph{Emph vastagra való hatása}}
+\\
+\textsc{\emph{Emph kiskapitálisra való hatása}}
+\\
+%3. feladat
+\textcolor{red}{piros szöveg}
+\\
+\reflectbox{Függőleges tükrözés}
+\fcolorbox{black}{white}{\reflectbox{Függőleges tükrözés}}
+\\
+\scalebox{2}[-1]{szöveg} %Vízszintes tükrözés
+\\
+\rotatebox{90}{90 fokos forgatás}
+\\
+\rotatebox{270}{270 fokos forgatás}
+\\
+\colorbox{black}{\color{white}{helo}}
+\\
+\fcolorbox{red}{white}{\color{red}{piros}}
+\\
+\colorbox{black}{\parbox{15cm}{\color{white}{\hulipsum{1}}}}
+\\
+\\
+\selectlanguage{english}
+\begin{flushright}
+\blindtext{1}
+\end{flushright}
+\selectlanguage{latin}
+\linespread{2}
+\lipsum{1}
+\selectfont
+\\
+\linespread{1}
+\selectlanguage{magyar}
+A mai dátum: "\today"
+
+\selectlanguage{english}
+The date today is: "\today"
+
+\end{document}
+
+
+
+
+
+
