@@ -1,0 +1,96 @@
+\documentclass[twoside, 12pt]{article} 
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{hulipsum}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\geometry{inner=3cm, outer=5cm, bindingoffset=1cm, marginparwidth=3cm, marginparsep=0.5cm, headheight=2cm}
+\usepackage[utf8]{inputenc}
+%\usepackage{hyperref}
+\title{Második gyakorlat}
+\author{Garay Gabriel}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyfoot[C]{Miskolci Egyetem}
+\fancyhead[RE]{\ref{s:oldalstil}}
+\fancyhead[LO]{\ref{ssec:substil}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\begin{document}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{abstract}
+\hulipsum[1-2]
+\footnote{zagyvaság}
+\end{abstract}
+
+
+\newpage
+\setcounter{tocdepth}{5}
+\tableofcontents
+\pagenumbering{roman}
+\clearpage
+
+\section[Első]{Első szekció}
+\ref{p:mely}
+\ref{s:sectionvege}
+\ref{ssec:substil}
+\ref{subs: fuggelek}
+\\
+\pageref{s:sectionvege}
+\pageref{p:mely}
+\pageref{ssec:substil}
+\pageref{subs: fuggelek}
+\label{s:oldalstil}
+\footnote{Első szekció}
+\subsection{Első alfejezet}
+\label{ssec:substil}
+\hulipsum[1-2]
+\pagenumbering{arabic}
+\marginpar{Széljegyzet páratlan oldalon}
+\newpage
+
+\subsection{Alfejezet}
+\label{s:sectionvege}
+\hulipsum[3-4]
+\marginpar{Széljegyzet páros oldalon}
+
+\newpage
+\setcounter{secnumdepth}{5}
+\section{Második szekció}
+\subsection{}
+\subsubsection{}
+\paragraph{}
+\label{p:mely}
+\subparagraph{Egymásba ágyazva}
+
+\clearpage
+\section*{Számozatlan szekció}
+\label{s:szamozatlan}
+\hulipsum[1-6]
+\appendix
+\section{Első függelék}
+\subsection{}
+\subsection{}
+\label{subs: fuggelek}
+\section{Második függelék}
+\subsection{}
+\subsection{}
+\clearpage
+Quote
+\begin{quote}
+\lipsum[1-2]
+\end{quote}
+
+Quotation
+\begin{quotation}
+\lipsum[2-3]
+\end{quotation}
+
+Verse
+\begin{verse}
+\hulipsum[4-5]
+\end{verse}
+\end{document}

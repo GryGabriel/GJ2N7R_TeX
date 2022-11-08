@@ -1,0 +1,75 @@
+\documentclass[twocolumn]{article} 
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{hulipsum}
+\usepackage{lipsum}
+\usepackage{geometry}
+\geometry{inner=3cm, outer=5cm, bindingoffset=1cm, marginparwidth=3cm, marginparsep=0.5cm}
+\columnsep=50pt
+\pagestyle{headings}
+\pagestyle{myheadings}
+\markboth{Garay Gabriel}%
+{Második gyakorlat}
+\usepackage[utf8]{inputenc}
+\title{Második gyakorlat}
+\author{Garay Gabriel}
+
+\begin{document}
+
+\maketitle
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{abstract}
+\hulipsum[1-2]
+\footnote{zagyvaság}
+\end{abstract}
+
+
+\newpage
+\setcounter{tocdepth}{5}
+\tableofcontents
+\pagenumbering{roman}
+\clearpage
+
+\section[Első]{Első szekció}
+\footnote{Első szekció}
+\subsection{Első alfejezet}
+\hulipsum[1-2]
+\pagenumbering{arabic}
+\marginpar{Széljegyzet páratlan oldalon}
+\newpage
+
+\subsection{Alfejezet}
+\hulipsum[3-4]
+\marginpar{Széljegyzet páros oldalon}
+
+\newpage
+\setcounter{secnumdepth}{5}
+\section{Második szekció}
+\subsection{}
+\subsubsection{}
+\paragraph{}
+\subparagraph{Egymásba ágyazva}
+
+\appendix
+\section{Első függelék}
+\subsection{}
+\subsection{}
+\section{Második függelék}
+\subsection{}
+\subsection{}
+\clearpage
+Quote
+\begin{quote}
+\lipsum[1-2]
+\end{quote}
+
+Quotation
+\begin{quotation}
+\lipsum[2-3]
+\end{quotation}
+
+Verse
+\begin{verse}
+\hulipsum[4-5]
+\end{verse}
+\end{document}
